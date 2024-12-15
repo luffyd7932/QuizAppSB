@@ -84,4 +84,15 @@ public class QuizService {
         }
         return new ResponseEntity<>("Quiz do not exist !!" , HttpStatus.NOT_FOUND);
     }
+
+    public ResponseEntity<List<Quiz>> getAllQuizes() {
+        try {
+            return new ResponseEntity<>(quizDoa.findAll(), HttpStatus.OK);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(new ArrayList<>(),HttpStatus.BAD_REQUEST);
+    }
 }
+
+

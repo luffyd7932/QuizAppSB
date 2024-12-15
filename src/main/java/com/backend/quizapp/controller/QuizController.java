@@ -1,6 +1,7 @@
 package com.backend.quizapp.controller;
 
 import com.backend.quizapp.model.QuestionWrapper;
+import com.backend.quizapp.model.Quiz;
 import com.backend.quizapp.model.Response;
 import com.backend.quizapp.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +36,11 @@ public class QuizController {
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteQuiz(@PathVariable Integer id){
         return quizService.deleteQuiz(id);
+    }
+
+    @GetMapping("get/allquiz")
+    public ResponseEntity<List<Quiz>> getAllQuizes(){
+        return quizService.getAllQuizes();
     }
 
 }
