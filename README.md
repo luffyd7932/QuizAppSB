@@ -26,9 +26,9 @@ QuizAppSB is a Spring Boot-based RESTful API for creating, managing, and taking 
 ### Database Setup
 Update `src/main/resources/application.properties` if needed:
 ```
-spring.datasource.url=jdbc:postgresql://localhost:5432/questiondb
-spring.datasource.username=postgres
-spring.datasource.password=2026
+spring.datasource.url=jdbc:postgresql://localhost:5432/{YOUR_DB}
+spring.datasource.username={YOUR_USERNAME}
+spring.datasource.password={YOUR_PASSWORD}
 ```
 Create the database in PostgreSQL:
 ```sql
