@@ -1,9 +1,12 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Ignore all files in target/ directory
+/target/
 
+# But, allow specific files within the target/ directory (i.e., JAR files)
+!target/*.jar
+
+!.mvn/wrapper/maven-wrapper.jar
+
+# Ignore IDE project files
 ### STS ###
 .apt_generated
 .classpath
@@ -31,3 +34,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore logs, OS-specific files
+*.log
+*.swp
+.DS_Store
+Thumbs.db
